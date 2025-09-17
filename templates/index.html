@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Dota2 选手猜猜看</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+<div class="container">
+    <h1 class="animate__animated animate__fadeInDown">🎮 Dota2 选手猜猜看 🎮</h1>
+
+    <div class="input-wrapper animate__animated animate__fadeInUp">
+        <input type="text" id="guessInput" placeholder="输入选手ID" autocomplete="off">
+        <button id="guessBtn" class="guess-btn">猜测</button>
+        <ul id="suggestions" class="suggestions"></ul>
+    </div>
+
+    <div id="guesses-section">
+        <!-- 表头 -->
+        <div class="guess-header">
+            <div>选手</div>
+            <div>队伍</div>
+            <div>国籍</div>
+            <div>年龄</div>
+            <div>参加TI次数</div>
+            <div>位置</div>
+        </div>
+
+        <!-- 猜测列表 -->
+        <div id="guesses" class="guesses-list"></div>
+
+        <!-- 剩余机会 -->
+        <div id="attempts" class="attempts">剩余机会: 10</div>
+
+        <!-- 游戏提示 -->
+        <div id="message" class="message"></div>
+
+        <!-- 重新开始按钮 -->
+        <button id="restartBtn" class="restart-btn" style="display:none;">重新开始</button>
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

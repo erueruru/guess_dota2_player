@@ -1,0 +1,169 @@
+/* 全局 */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* 输入框和按钮 */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;   /* 保证 suggestions 的绝对定位基于输入框 */
+    z-index: 20;          /* 提高整体层级 */
+}
+
+input[type=text] {
+    width: 300px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border-color: #2196f3;
+}
+
+.guess-btn {
+    margin-left: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.guess-btn:hover {
+    background-color: #388e3c;
+}
+
+/* 提示框 */
+.suggestions {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background: #f0f0f0;
+    border-radius: 6px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 999;         /* 提升 z-index，覆盖其他元素 */
+}
+
+.suggestions li {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.suggestions li:hover {
+    background-color: #2196f3;
+    color: #fff;
+}
+
+/* 猜测部分 */
+#guesses-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.guess-header {
+    display: flex;
+    background-color: #2196f3;
+    color: white;
+    padding: 8px 0;
+    border-radius: 6px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.guess-header div, .guess-card div {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.guesses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* 猜测卡片 */
+.guess-card {
+    display: flex;
+    gap: 6px;
+    background: #f9f9f9;
+    padding: 8px 0;
+    border-radius: 6px;
+}
+
+/* 状态样式 */
+.correct { background-color: #4caf50; color: white; }
+.close { background-color: #ffeb3b; color: #333; }
+.wrong { background-color: #eee; color: #555; }
+
+/* 剩余机会 */
+.attempts {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 游戏提示 */
+.message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f44336;
+    margin-top: 10px;
+}
+
+/* 重新开始按钮 */
+.restart-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+}
+
+.restart-btn:hover {
+    background-color: #1976d2;
+}

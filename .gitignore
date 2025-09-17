@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Python logs
+*.log
+
+# MySQL / SQLite / DB
+*.db
+*.sqlite3
+
+# Flask instance folder
+instance/
+
+# PyCharm / JetBrains IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Node / npm (如果未来加前端构建)
+node_modules/
+dist/
+build/
+
+# Environment variables / secrets
+*.env
+*.ini
+config.py
+
+# Temporary files
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Coverage / test reports
+.coverage
+htmlcov/
+*.cover
+
